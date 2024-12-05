@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>印尼:從包容到迫害</title>
+    <style>
+        body {
+           font-family: 'Roboto Slab', serif;
+            line-height: 1.8;
+            margin: 20px;
+            color: #333;
+            background-image: url('{{ url_for('static', filename='998.jpg') }}');
+            background-size: 100% 100%;  /* 拉伸圖片以適應整個容器 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4);  /* 增加背景透明度，0.7是較高透明度 */
+
+        }
+        h1, h2, h3 {
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 10px;
+        }
+        p {
+            text-indent: 2em;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #800000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            width: 80%;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>印尼:從包容到迫害</h1>
+
+   <p>2015年印尼人口約2.45億，華人占3%，雖為印尼第三大民族，但掌控了約73%的上市公司，對經濟影響深遠。儘管如此，印尼是東南亞中實施排華政策最多的國家，華人在經濟、文化及政治上受到壓迫，並經歷數次血腥排華暴動。90年代末，隨著蘇哈托政權倒台，華人的地位逐步改善，開始在經濟、社會與政治領域獲得平等待遇。
+</p>
+    
+    <h2 id="section1">印尼華人的限制起源</h2>
+    <img src="{{ url_for('static', filename='5564.png') }}" alt="印尼華人" onclick="openModal('印尼1946年獨立後，首任總統蘇卡諾(Sukarno)為了拉攏華人，同年6月18號頒布命令將農曆新年規定為華人的公共假期。在之前兩個月印尼頒布的「印尼共和國公民與居民法」條文規定年滿21歲非單身而且在印尼出生定居5年以上的僑民若表明態度可以放棄印尼公民身分，華人可以自動取得印尼國籍，但當時大部分華人基於大中華情感或者因中國局勢未能取得中華人民共和國公民身分等因素而拒絕加入印尼國籍。印尼華人的國籍問題要到1955年與中國簽訂的「中印雙重國籍問題條約」才解決。然而從條約簽訂起印尼對於華人入籍實施嚴格的措施辦法，譬如1958年「國籍法」規定只有第二代華人可以申請入籍，1959年第10號總統令禁止非印尼公民在縣以下地區居住謀生。1969年4月10日印尼單方面廢止與中國的雙重國籍問題條約，有外僑身分的華人及其後代只可根據1958年國籍法入籍。1978年起政府規定外籍公民需要使用國籍證，令華人讀大學、參加公務員考試以及辦理民政事務上處處受刁難。')"style="max-width:50%; height:50%;">
+    
+    
+
+    <h2 id="section2">限制的擴大</h2>
+    <img src="{{ url_for('static', filename='888889.png') }}" alt="限制的擴大" onclick="openModal('印尼華人除了在印尼華人除了在國籍問題上倍受針對歧視，在經濟和文化地位上同樣被政府所打壓。早在1951年時任工業部長蘇米特洛規定重工業禁止印尼公民以外人士投資，第二類非主要工業印尼投資者需要佔一半，1958年6月18日外僑被禁止在印尼從事內島貿易，同年9月起與印尼沒有外交關係的華人企業均被政府接收。到了70年代，印尼政府在1974年規定非土著企業(華人)必須將股份和擁有權轉移給土著，並實施「堡壘制」將進口商分門別類。1990年3月4日蘇哈托向20多位華人企業家呼籲他們將企業股份轉移給全國合作社，改善因為種族經濟政策導致的貧富差距，稱之為「義父制」，華人企業家在蘇哈托的默許下與政府軍隊的關係密切，互相利用。印尼政府亦長期壓抑華語的使用，1952年教育部規定所有外僑學校必須登記接受教育部監管，印尼文和印尼史地課程為必修課程;1957年印尼政府規定華文學校教師校長必須通過印尼文考試，11月又宣布不再發出外僑學校許可證，現有的僑校不准招收印尼學生。上述措施令華人學校不斷減少，從1957年的1669所縮減至1958年的850所學校。1965年9月印尼發生有中共支持的930事件，印尼政府強制關閉629所親北京學校，兩年後更是禁止外國學校，但准許華人社團創辦特種項目民族學校(可以教授2小時的華語但其餘以印尼文授課)。蘇哈托的印尼亦推動華人更改名字，1967年起政府宣布所有印尼華人必須取印尼名字，同時中文出版刊物被禁止出版發行，華人社團被關閉，華人傳統信仰的孔教亦不被政府所承認。')"style="max-width:50%; height:50%;">
+    
+    <h2 id="section3">血腥排華</h2>
+    <img src="{{ url_for('static', filename='543.jpg') }}" alt="血腥排華" onclick="openModal('印尼華人受到的排華為東南亞之中死傷最為慘重的，印尼歷史上經歷3次大型的排華暴動。第一次排華發生於印尼獨立不久(1946-1947)，印尼華人由於親荷蘭殖民當局的態度以及豐厚的經濟實力遭到土著的敵視，土著向華人展開報復，粗略估計全印尼大約有37000華人被殺害。1965年「930事件」後印尼政府加緊清除親北京勢力，除了關閉華人學校、社團和會社外，大量華人被指控為共產黨被捕甚至殺害。1998年印尼受亞洲金融風暴影響經濟低迷，民眾將對經濟不景氣的憤怒發洩在經濟富裕的華人上，當年的排華從1月12日爪哇地區暴徒攻擊華人商店開始，擴散至雅加達、棉蘭、泗水等地。1998年印尼排華由於大量華人婦女受到性暴力引起國際關注，美國、澳洲、台灣等均要求印尼政府嚴肅調查印尼華人女性遭受的性暴力和嚴懲兇手，根據民間組織和官方統計，大約451-1190人死於暴動，至少85位婦女受到性暴力傷害，無數店鋪和華人資產被縱火搶掠。 ')"style="max-width:50%; height:50%;">
+
+    
+
+    
+    <h2 id="section4">血腥後的包容</h2>
+    <img src="{{ url_for('static', filename='1445.png') }}" alt="血腥後的包容" onclick="openModal('蘇哈托倒台後，新印尼政府逐步取消針對印尼華人的管制法令，華人開始慢慢得到與土著的平等地位。1999年第4號總統令容許華語教學並成立全國華文教學綜合協調處統籌華語教育，2001年4月21日宣布取消1978年貿易部禁止中文印刷品進口出版的決定，華人政黨和政治人物在蘇哈托下台後湧現，最知名的為先後在2009-2012年擔任眾議員和2014-2017年擔任雅加達首長的鍾萬學。2000年起印尼政府撤銷1967年禁止華人公開進行宗教民俗活動的行政命令，總統瓦希德在同年2月出席孔教春節大會時宣布承認孔教為合法宗教，2001年起農曆新年為全國假日。與此同時，從2004年4月14日期印尼華人不再需要持有國籍證明，華人學生進入國立大學的比例在1999年起從10%提升到20%。雖然印尼華人不再像從前受到國家的歧視，但現今印尼軍公教等領域仍有排華意識存在，而印尼華人必須取印尼姓名的法令從未被廢除。現今的印尼總括而言已經是一個建立在各民族平等包容基礎上的國家。 ')"style="max-width:50%; height:50%;">
+    
+    <nav>
+        <a href="#section1">印尼華人的限制起源</a>
+        <a href="#section2">限制的擴大</a>
+        <a href="#section3">血腥排華</a>
+        <a href="#section4">血腥後的包容</a>
+    </nav>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // 打開模態框
+        function openModal(description) {
+            document.getElementById("modal-text").innerText = description;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // 關閉模態框
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // 點擊模態框外部區域關閉模態框
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+

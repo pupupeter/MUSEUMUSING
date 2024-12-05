@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>馬來西亞：五一三事件
+</title>
+    <style>
+        body {
+           font-family: 'Roboto Slab', serif;
+            line-height: 1.8;
+            margin: 20px;
+            color: #333;
+            background-image: url('{{ url_for('static', filename='0000.jpg') }}');
+            background-size: 100% 100%;  /* 拉伸圖片以適應整個容器 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4);  /* 增加背景透明度，0.7是較高透明度 */
+
+        }
+        h1, h2, h3 {
+            color: #000000;
+            text-align: center;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 10px;
+        }
+        p {
+            text-indent: 2em;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #800000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            width: 80%;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>馬來西亞：五一三事件</h1>
+</h1>
+
+    <h2 id="section1">馬來西亞獨立</h2>
+    <img src="{{ url_for('static', filename='8888.jpg') }}" alt="馬來亞" onclick="openModal('馬來亞自1957年從英國獨立後，一直都由巫來由人統一組織（巫統）、馬來亞華人公會（馬華）及馬來亞印度國民大會黨（國大）組成「聯盟」執政，而此時的馬來西亞族群多樣，以巫裔（馬來人）、華裔（華人）、印裔（馬來西亞印度人）占大宗。最初，聯盟即是三個族群聯合起來組成的政治聯盟，但在這之外仍有許多不滿聯盟獨大的政黨，這些族群創造了馬來西亞的多元族群，但由於馬來西亞在族群和地理上的特殊性，也替這塊土地帶來長期的政治鬥爭。')" style="max-width:50%; height:50%;">
+    
+    <h2 id="section2">五一三事件</h2>
+    <img src="{{ url_for('static', filename='9898.jpg') }}" alt="五一三事件" onclick="openModal('巫統作為完全由馬來人（巫來由人）組成的政黨，其對馬來西亞自主權有強烈的種族意識，認為馬來西亞應由馬來人完全掌控。時任巫統籍首相東姑·阿布都拉曼（Tunku Abdul Rahman）由於對各族群採取和平態度，認為應該對各族群平等對待，相互共榮。其經濟政策也對非馬來人相對優待，但這也引起了巫統內部不滿，認為其放任華人以及英國人在馬來西亞橫行，卻罔顧馬來人的利益，造成馬來人的貧窮。1969年5月10日，馬來西亞第三屆大選掀開了序幕。包括以華人為主的民主行動黨及馬來西亞民政運動黨等數個反對聯盟的在野黨勢力在選舉上取得大勝，聯盟在國會及地方議會席位大大減少，成功威脅到聯盟的執政。5月11日，以華人為主的在野黨勢力開始於首都吉隆坡展開勝選示威遊行，5月13日，聯盟支持者也加入反示威遊行，接下來的事情眾說紛紜，但不可否認的是，5月15日，馬來人跟華人的大規模衝突達到最高點，吉隆坡陷入完全動亂，雙方互相指責對方相互攻擊，駐馬英軍宣稱若無首相指示不會介入動亂，東姑則指示戒嚴，國家進入緊急狀態，國會停擺，成立國家行動委員會（NOC）為最高決策單位。事後吉隆坡仍陷入短時間的混亂，同年10月的官方報告共196人於這段時間中死亡，大部分皆是華人。')"style="max-width:50%; height:50%;">
+    
+
+    <h2 id="section3">新的開始</h2>
+    <img src="{{ url_for('static', filename='849489.jpg') }}" alt="新的開始" onclick="openModal('五一三事件不是結束，而只是華人面臨困境的開始：五一三事件平息後，以馬哈地·​穆罕默德（Mahathir bin Mohamad）為首的激進派巫統成員持續向執政黨尤其是東姑發出強烈的不滿，抱持和平態度的東姑·阿布都拉曼被黨內強烈排他的主流民意而被視為馬來人之恥，被迫下台。巫統則持續長期把握朝政，就算直到2018年馬來西亞首次政黨輪替，仍是極其有力的在野黨，因此導致五一三事件至今仍未如臺灣的228事件一般被提升到國家紀念的等級，政府也遲遲不敢公開五一三事件的官方檔案，只能停留在民間紀念與口述歷史的傳播，使屬於馬來人與華人各自倖存者的正義被持續傳唱，最後發展為不能再彼此理解的敵對界線。自此往後，馬來西亞也不可避免地陷入了民族主義為主的極端政治泥沼，雖不如以往再發生大規模暴力事件，但不分政治與生活，族群間不相往來甚至發生糾紛的情況仍頻頻發生。1970年，繼任東姑的首相阿都·拉薩（Abdul　Razak）推出新經濟政策（Dasar Ekonomi Baru）：（新經濟政策）試圖在此後20年（1970至1990年）達成兩項目標：第一，不論種族身分，消滅貧窮；第二，『重新組構社會，廢除以經濟功能來區別種族的情況』。然而，在實行過程中，新經濟政策將『馬來人支配轉變成馬來人霸權』，從而重新組建的馬來西亞多元社會契約，變得不利於非馬來人。」　不論在在社會、經濟、教育上，作為非土著」的華人皆受到不平等對待，然而特權皆在土著」的馬來人身上，而在巫統一黨獨大的情況下，就算自覺為馬來西亞人的華人，也只能將自己退到次等公民的地位上，難以再與馬來人獨大的政府爭辯。這種情形，直到現今政黨輪替後仍未能徹底改變。而這一切都始於那原因撲朔迷離，卻帶來席捲全大馬排華風潮的五一三事件。')"style="max-width:50%; height:50%;">
+    
+
+    
+    <nav>
+        <a href="#section1">馬來西亞獨立</a>
+        <a href="#section2">五一三事件</a>
+        <a href="#section3">新的開始</a>
+    </nav>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // 打開模態框
+        function openModal(description) {
+            document.getElementById("modal-text").innerText = description;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // 關閉模態框
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // 點擊模態框外部區域關閉模態框
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>東帝汶：歷史的傷痕與獨立之路</title>
+    <style>
+        body {
+           font-family: 'Roboto Slab', serif;
+            line-height: 1.8;
+            margin: 20px;
+            color: #333;
+            background-image: url('{{ url_for('static', filename='56566.jpg') }}');
+            background-size: 100% 100%;  /* 拉伸圖片以適應整個容器 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4);  /* 增加背景透明度，0.7是較高透明度 */
+
+        }
+        h1, h2, h3 {
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 10px;
+        }
+        p {
+            text-indent: 2em;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #800000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            width: 80%;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>東帝汶：歷史的傷痕與獨立之路</h1>
+    <p>葡萄牙殖民時期的東帝汶被邊緣化，未經現代化發展。1974年葡萄牙政權垮臺後，東帝汶陷入權力真空，成為印尼擴張目標。印尼的軍事入侵與鎮壓促使民族主義興起，最終走向獨立。</p>
+    <h2 id="section1">印尼的干預與侵略</h2>
+    <img src="{{ url_for('static', filename='5454.jpg') }}" alt="印尼攻擊" onclick="openModal('葡萄牙撤離後，東帝汶陷入內亂，印尼支持保守派並導致革陣掌權。1975年，印尼在美國默許下入侵，聲稱防止共產擴散，尤其在越南統一後，對左翼政權的恐懼加劇干預。印尼進攻伴隨暴行，革陣轉入山區展開游擊戰。')" style="max-width:50%; height:50%;">
+    
+    <h2 id="section2">長期佔領與民族主義的成長</h2>
+    <img src="{{ url_for('static', filename='6996.png') }}" alt="聖克魯斯大屠殺" onclick="openModal('印尼推行同化政策，但壓迫加劇不滿，民族主義情緒增強。1991年聖克魯斯大屠殺中，印尼軍隊在靈園鎮壓示威者，震驚國際社會。天主教會成為抵抗核心，國際譴責促使反殖民力量壯大。')"style="max-width:50%; height:50%;">
+    
+    
+
+    <h2 id="section3">從國際壓力到獨立</h2>
+    <img src="{{ url_for('static', filename='pppp.jpg') }}" alt="覺醒" onclick="openModal('1990年代，冷戰結束與印尼內部問題削弱其控制力。1999年公投支持獨立後，親印尼勢力引發暴力，聯合國介入派維和部隊穩定局勢。2002年，東帝汶正式獨立，結束長期暴力與戰爭，開啟自主建國歷程。')"style="max-width:50%; height:50%;">
+    
+
+    
+    <nav>
+        <a href="#section1">印尼的干預與侵略</a>
+        <a href="#section2">長期佔領與民族主義的成長</a>
+        <a href="#section3">從國際壓力到獨立</a>
+
+    </nav>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // 打開模態框
+        function openModal(description) {
+            document.getElementById("modal-text").innerText = description;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // 關閉模態框
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // 點擊模態框外部區域關閉模態框
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>越南：分裂的暴政與統一的惡夢</title>
+    <style>
+        body {
+           font-family: 'Roboto Slab', serif;
+            line-height: 1.8;
+            margin: 20px;
+            color: #333;
+            background-image: url('{{ url_for('static', filename='99.png') }}');
+            background-size: 100% 100%;  /* 拉伸圖片以適應整個容器 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4);  /* 增加背景透明度，0.7是較高透明度 */
+
+        }
+        h1, h2, h3 {
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 10px;
+        }
+        p {
+            text-indent: 2em;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #800000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            width: 80%;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>越南：分裂的暴政與統一的惡夢</h1>
+
+    <h2 id="section1">南北越分治</h2>
+    <img src="{{ url_for('static', filename='Gen-commons.jpg') }}" alt="日內瓦會議" onclick="openModal('1954 年日內瓦會議奠定南北越之分治，北方是越南民主共和國，南方是越南合眾國。雖然當時人民有自由遷徙南北方的抉擇，但大時代下的生離死別卻在此上演。有家庭不得不拋下無法長途跋涉的老邁之人，就此永別；也有人決定留下保衛自己的家園；也有家庭內部因政治意識分歧而各奔東西...... ')" style="max-width:50%; height:50%;">
+    
+    <h2 id="section2">北越統治</h2>
+    <img src="{{ url_for('static', filename='擷取.png') }}" alt="胡志明圖片" onclick="openModal('1954 年底，北越全境展開共產化運動，其中土地改革影響社會深遠，諸多人民遭到當局錯劃階級，際遇甚為悲慘。這些失敗的改革最後引發抗拒，終遭鎮壓，領導人不得不出面為這些錯誤道歉。這些不公不義人民央求當局保障人權、進行司法改革，1957年國會通過三條法律：第一條是住宅與通信的不可侵犯權、第二條是確保集會自由、第三條涉及宗教與言論自由。但能多大程度實行，卻是個謎......')"style="max-width:50%; height:50%;">
+    
+    <p>這是一段時人的回憶錄，講述激進改革對他們的影響：有一天我在外面玩，媽媽突然過來，把弟弟跟我拖回家，讓我們坐在爐灶邊上......
+她哭著對我們說：「從今以後，你得留在家照顧弟弟，不可以出去玩，也不可以再
+上學了。如果碰到朋友，你必須鞠躬，叫他們『先生』或『女士』。 
+我繃著臉，滿肚子委屈不高興，母親狠狠打了我一巴掌，打得我眼冒金星。之後， 
+她抱著我弟弟與我痛哭，說了些我不懂的話：「新，我們家被釘上一個壞階級。」
+直到許多年後，我才逐漸了解母親當年必須忍耐的不公與屈辱。我也開始懂得她給
+我的那一巴掌，說明她當時已經下定決心，要撐過那段恐怖而荒唐的歲月...... 
+儘管我們家從來就是有一餐沒一餐，母親卻被安上「殘酷村霸」的標籤。不僅如此，
+土改隊還禁止我們與村中親友扯上任何關係。對我母親來說，那是最痛苦、最屈辱
+的經驗。我們只能啃著乾掉發霉的地瓜充飢。許多時候我們只有香蕉根煮的粥可吃。
+每天晚上，村民兵列隊通過我們家門前的聲音，都讓我母親趕到死亡恐懼。</p>
+
+    <h2 id="section3">南越統治</h2>
+    <img src="{{ url_for('static', filename='2.png') }}" alt="吳廷琰" onclick="openModal('越南共和國的司法並非獨立於政府之外，沒有監督權，因此政府像共產黨一樣，可以濫捕、新聞檢查、酷刑、處決、強制勞役與使用集中營，犯下許多違反人權的罪刑。 此外，吳廷琰等還在1956年初下達一項總統令，當局可以逮捕任何涉嫌威脅國家安全的人。嚮往民主的守法公民，因為在政治觀點上反對吳廷琰而遭封口或下獄，當局甚至建立「特別軍事法庭」，有權逮捕、監禁與處決從事「革命活動」的人。1954-1960年間，有將近5萬人因為這波反共攻勢而下獄...')"style="max-width:50%; height:50%;">
+    
+    <h2 id="section4">佛教危機</h2>
+    <img src="{{ url_for('static', filename='1.png') }}" alt="吳廷琰" onclick="openModal('1963.5-1963.9 的佛教危機最終導致吳廷琰政權的跨臺，1963.5.8 佛教徒發動要求宗教平等示威，與政府軍起衝突，造成七名佛教徒青年死亡，以致憤怒的青年佛教僧侶和民眾走上街頭，一位名叫釋廣德的高僧在1963.6.11 盤坐在西貢市中心區，支持者在他身上灑下汽油，然後點火，釋廣德以身殉教的場景被送往全世界，更多佛教徒走上街頭，僧侶自焚殉教事件頻傳，吳廷琰於是在8月下令鎮壓，佔領佛寺，逮捕至少數百甚至數千僧侶。 ')"style="max-width:50%; height:50%;">
+
+    <p>以下是在吳廷琰政權底下被迫犧牲的案例： 
+阮祥三是越南著名反共政治人物，更是20世紀30年代以來的越南文化巨人，阮祥
+三曾和吳廷琰短暫共事，但之後因為吳廷琰與其家屬在越南的作為而鄙視吳廷琰，
+他不願自己也像眾多非共人士一樣遭到吳廷琰迫害毒手，1963.7.7，他與孩子們共享
+七夕家聚，不過這是阮家父子最後一次的家聚，因為阮祥三已經在他那杯喜愛的強
+尼走路(Johnny Walker)蘇格蘭威士忌裡摻了過量的巴比妥酸鹽。阮祥三在遺書裡面寫
+道： 讓歷史做我的裁判。其他任何裁判我概不接受。逮捕和拘禁民族主義反對派    
+人士是嚴重罪行，會讓國家淪入共產黨手中。我反對這些行動，決定以死明 
+志......無論什麼自由都不容踐踏，這是我對有意踐踏自由的人的警告。</p>
+
+    
+    <h2 id="section5">越戰對人民的影響</h2>
+    <img src="{{ url_for('static', filename='3.png') }}" alt="美萊村大屠殺" onclick="openModal('戰爭中的警報、演習和防空洞是人民的日常，在南越，村民為躲轟炸而逃入城市；在北越，美國對都市區的空襲則迫使政府將大量百姓撤往鄉間。婦女在當時也深刻地涉入戰爭。許多北方婦女在當時加入越南民主共和國青年旅，後來在極度艱苦的狀況下在胡志明小徑運補。戰爭為小徑上的婦女造成龐大的精神創傷，許多人因此停經。許多婦女因此一直未婚，後來卻因為單身而遭社會排斥。兒童也置身戰場，特別是在南方，有些孩子當了信差，當了情報員與嚮導，敵對雙方的活，他們都幹。 根據河內之前發表的統計數字，這場1965年展開後歷經10年結束的惡戰，使越南民主共和國的越南人民軍，以及民族解放陣線的人民解放武裝部隊軍民，合計死了310 萬人。20萬越南共和國軍喪生。此外，越戰美軍陣亡數為5萬8千人。有人回憶美國的大轟炸：「造成一種深深烙印在我們心中，日日夜夜、年復一年、永難磨滅的心理恐怖」。也有人說：「我們總是彼此告誡，『到南方以後，想辦法保住你的臉孔。』」更有一位隨美軍進行軍事任務的法國退伍軍人說：「我們以非常低、非常快的速度掠過目標。我見到一些村民從岸邊冒煙突火，衝上舢舨逃生。村子已經化為一片火海。燃著火的凝膠狀汽油蓋在漁網上焚燒的景象。讓我終生難忘。」  ')"style="max-width:50%; height:50%;">
+    <h2 id="section6">逃離統一的越南</h2>
+    <img src="{{ url_for('static', filename='4.png') }}" alt="越南船民" onclick="openModal('1975 年南北越行將統一之際，有不少人逃離統一的越南，他們大多數是與舊政權有瓜葛的南方人，到1978年，數十萬越南境內華人和華裔越南人已經走上逃難之路。 逃離印度支那，必須要賄賂地方警察與邊界巡邏人員以放行，但還得賣掉他們的財務，以籌錢支付走私客，甚至走私黑幫帶他們走才行。數以萬計越南人乘坐極度不安全的小船，渡過南中國海逃亡，但即使好不容易靠岸，許多沿岸國亦不准他們上岸，把他們趕回海上，許多難民因此死難，他們就是所謂的「船民」。據估計，約20萬越南人在逃亡途中遇害。 ')"style="max-width:50%; height:50%;">
+    
+    <nav>
+        <a href="#section1">南北越分治</a>
+        <a href="#section2">北越統治</a>
+        <a href="#section3">南越統治</a>
+        <a href="#section4">佛教危機</a>
+        <a href="#section5">越戰對人民的影響</a>
+        <a href="#section6">逃離統一的越南</a>
+    </nav>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // 打開模態框
+        function openModal(description) {
+            document.getElementById("modal-text").innerText = description;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // 關閉模態框
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // 點擊模態框外部區域關閉模態框
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+

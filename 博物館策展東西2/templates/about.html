@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>東南亞人權危機</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-image: url('{{ url_for('static', filename='278645.png') }}'); /* 替换为你的背景图片 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: brightness(85%); /* 调整背景亮度 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* 让背景覆盖整个视口 */
+        }
+
+        h1 {
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px; /* 超链接之间的间距 */
+            flex-wrap: wrap; /* 当链接太多时允许换行 */
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: all 0.3s ease; /* 添加平滑过渡效果 */
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>東南亞人權危機</h1>
+    <p>探索東南亞各國的人權歷史：</p>
+
+    <!-- 國家超連結導航 -->
+    <nav>
+        <a href="/vietnam">越南</a>
+        <a href="/myanmar">緬甸</a>
+        <a href="/malaysia">馬來西亞</a>
+        <a href="/indonesia">印尼</a>
+        <a href="/cambodia">柬埔寨</a>
+        <a href="/EastTimor">東帝汶</a>
+        <a href="/curation">參展資料~來嘛</a>
+    </nav>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IKZZWkLvTzM?si=52hhil52yQBl7GYb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+</body>
+</html>
+

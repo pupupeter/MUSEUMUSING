@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>緬甸：變臉的緬甸</title>
+    <style>
+        body {
+           font-family: 'Roboto Slab', serif;
+            line-height: 1.8;
+            margin: 20px;
+            color: #333;
+            background-image: url('{{ url_for('static', filename='658.png') }}');
+            background-size: 100% 100%;  /* 拉伸圖片以適應整個容器 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4);  /* 增加背景透明度，0.7是較高透明度 */
+
+        }
+        h1, h2, h3 {
+            color: #FF0000;
+            text-align: center;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 10px;
+        }
+        p {
+            text-indent: 2em;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #800000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            width: 80%;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>緬甸：變臉的緬甸</h1>
+
+    <h2 id="section1">緬甸的「多元社會」</h2>
+    <img src="{{ url_for('static', filename='999.jpg') }}" alt="多元社會" onclick="openModal('在緬甸，理論上少數民族如克倫族、欽族等應該與緬族都擁有同樣的公民權利、機會等，但是實際上卻有落差，因此造就少數族群長期與緬族交戰。在此期間，緬甸政府掌控了所有學校、稅收等，緬族透過軍威作為後盾。因此，對於公職差事都由緬族擔任也常引發民怨。因此我們可以知道在2021年緬甸軍事政變以前，緬甸境內就已發生許多不平等的待遇。 ')" style="max-width:50%; height:50%;">
+    
+    <h2 id="section2">現今對於種族的迫害-羅興亞</h2>
+    <img src="{{ url_for('static', filename='7.png') }}" alt="摩卡" onclick="openModal('1948 年緬甸脫離英國殖民取得獨立，在獨立之前英國將部分孟加拉人移至與現孟加拉接壤的緬甸若開邦協助其在當地的殖民統治，當時孟加拉人仍是優勢族群，但在緬甸宣佈獨立、英國殖民政府離開後，遷入若開邦的孟加拉人卻變成當地的少數族群，這個族群因曾協助殖民政府進行統治和迫害，是故反過來成爲被本地居民迫害的對象。到60年代東巴基斯坦（現孟加拉）獨立，羅興亞人希望加入東巴基斯坦，發起一些「聖戰」，但最終被鎮壓，因而對於緬甸軍方、緬甸社會和緬族人來說，羅興亞人被視爲國家的不安定因素。1982年國籍法修改，被政府認定的種族由144個修改爲135 個，羅興亞人在被去除的種族之列，因此開始被緬甸政府和緬甸社會視爲外國人，失去國民教育和社會福利等等基本權利，從此已開始有零星羅興亞人逃離居住地開始流亡。在2017年時，由於族群衝突的爆發，羅興亞人遭緬甸軍警大規模殺害，居住的村落也遭到焚燒，而這樣的大規模屠殺已被聯合國認定爲「種族清洗」，自此大量的羅興亞難民開始流亡。2017年甚至兩位路透社記者公佈軍方屠殺羅興亞人的照片文件等證據，隨後因此入獄，翁山蘇姬在2019年至國際法庭爲緬甸政權辯護，但未正式回應羅興亞人的國民身份問題。現今，緬甸仍有60多萬羅興亞人繼續處於種族隔離的境況，面臨軍政府當局的迫害和監禁。其中約有14萬羅興亞人自2012年以來一直被關在若開邦中部的拘留營中，被剝奪了返回家園的權利。軍政府繼續執行大有問題的「關閉營地」 計劃，即在現有營地上或附近建造永久性結構，取代臨時長屋，進一步鞏固隔離。過去兩年中，若開邦中部各處的難民營裡只有不到一半的住房曾被修繕。')"style="max-width:50%; height:50%;">
+    
+    
+
+    <h2 id="section3">政變後緬族的覺醒</h2>
+    <img src="{{ url_for('static', filename='55.jpg') }}" alt="覺醒" onclick="openModal('2021 年緬甸軍政府發動政變後，原翁山蘇姬政府部分未被拘捕的議員與官員轉入地下，以「民族團結政府」（National Unity Government of Myanmar, NUG）之名持續對抗軍政府。NUG在當年6月的一份公告中明確表示，若其重返政權，將實現各民族平等，包括羅興亞人。這一表態相較於以往官方對羅興亞人的態度，是一個顯著的轉變。 同時，軍政府對平民展開無差別攻擊，使得許多緬族人在政變後首次直觀地感受到被迫害的痛苦，進而對羅興亞人的處境產生了更多的同情。這促使部分緬族人開始反思過去緬甸政府與社會對羅興亞人施加的迫害行為。另一方面，緬族民眾也對羅興亞人可能與軍政府合作的可能性感到擔憂，希望透過建立更廣泛的團結陣線，共同對抗軍政府。')"style="max-width:50%; height:50%;">
+    
+
+    
+    <h2 id="section4">羅興亞人真正的想法</h2>
+    <img src="{{ url_for('static', filename='6.png') }}" alt="羅興亞人" onclick="openModal('在政治訴求方面，羅興亞人渴望的並非脫離緬甸或成為孟加拉國的一部分。他們的主要目標是重獲1982年之前作為緬甸公民所享有的權利，重新成為被認可的緬甸人。事實上，羅興亞人對緬甸懷有深厚的歸屬感，而非另謀出路或追求獨立建國。他們的訴求核心是身份的恢復與合法地位的承認，而非宗教或其他形式的分裂主義。')"style="max-width:50%; height:50%;">
+    <h2 id="section5">宗教對立的真偽</h2>
+    <img src="{{ url_for('static', filename='88.jpg') }}" alt="越南船民" onclick="openModal('羅興亞人問題的根源很深，其本質類似於印巴分治後的衝突，主要可追溯至英國殖民統治時期的政策及其留下的歷史遺產。這並非單純的族群或宗教衝突，而是因殖民政策所引發的新舊移民間的資源競爭與矛盾，以及後來緬甸軍政府極端民族主義政策下的延續性衝突。 羅興亞人追求自治和平等的武裝抗爭，與撣族、克欽族以及東部山區的孟族、克倫族、克耶族等少數民族的抗爭類似。然而，這些民族大多被承認為原住民族，擁有合法的緬甸公民資格，而羅興亞人卻不具備此身分。這使得羅興亞人在缺乏法律保障的情況下，容易成為若開佛教徒報復與攻擊的對象，這種敵意又因歷史創傷而加深，包括二戰期間羅興亞人協助英軍對抗緬甸民族軍，以及近代歷史中若開地區雙方的衝突與劫掠行為。 因此，羅興亞人問題並非僅僅是宗教信仰的矛盾，而是由歷史恩怨、殖民政策遺留的錯誤以及軍政府獨裁統治下偏狹民族主義政策共同作用的結果。尤其在2021年緬甸軍政府政變後，更多緬族人開始體會到如羅興亞人一般的壓迫感，這或許能促使人們重新審視這段複雜的歷史問題。 ')"style="max-width:50%; height:50%;">
+    
+    <nav>
+        <a href="#section1">緬甸的「多元社會」</a>
+        <a href="#section2">現今對於種族的迫害-羅興亞</a>
+        <a href="#section3">政變後緬族的覺醒</a>
+        <a href="#section4">羅興亞人真正的想法</a>
+        <a href="#section5">宗教對立的真偽</a>
+        
+    </nav>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // 打開模態框
+        function openModal(description) {
+            document.getElementById("modal-text").innerText = description;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // 關閉模態框
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // 點擊模態框外部區域關閉模態框
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+

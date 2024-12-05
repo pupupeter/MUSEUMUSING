@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        /* 設定全頁背景動畫 */
+        body {
+            background-image: url('{{ url_for('static', filename='images.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            background-color: rgba(0, 0, 0, 0.4);
+            background-blend-mode: overlay;
+            animation: backgroundAnimation 20s infinite alternate;
+            
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* 背景動畫效果 */
+        @keyframes backgroundAnimation {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+            50% {
+                transform: scale(1.1) translate(-10px, -10px);
+            }
+            100% {
+                transform: scale(1) translate(0, 0);
+            }
+        }
+
+        /* 文字區塊效果 */
+        .content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            margin-bottom: 20px;
+        }
+
+        /* 引言樣式 */
+        .intro {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 800px;
+            text-align: left;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        /* 添加裝飾框 */
+        .intro:before, .intro:after {
+            content: '';
+            position: absolute;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+        }
+
+        .intro:before {
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: rotate(2deg);
+        }
+
+        .intro:after {
+            bottom: -10px;
+            right: -10px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: rotate(-2deg);
+        }
+
+        /* 漸入效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 連結樣式 */
+        nav {
+            margin-top: 20px;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 分隔線 */
+        .divider {
+            margin: 30px 0;
+            height: 3px;
+            width: 60%;
+            background: linear-gradient(to right, #ffcc00, rgba(255, 255, 255, 0));
+            border: none;
+        }
+
+        /* 圖案樣式 */
+        .decorative-circle {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ffcc00, #ff6600);
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            margin: 10px;
+        }
+
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>歡迎來到誰才是人－東南亞人權特展</h1>
+            <p>準備好跟我們一起探索了嗎~?</p>
+        <p>課程名稱:博物館與導覽</p>
+        <p>報告主題:誰才是人-東南亞人權特展</p>
+        <p>小組組長:114歷史林冠宏</p>
+        <p>小組組員:歷史112李恩錫、114歷史呂逸杰、歷史114今井友海、歷史115李原德、歷史115許家瑋</p>
+        <p>指導老師:石蘭梅</p>
+        <!-- 新增的導覽連結 -->
+        <nav>
+            <a href="/about">開始探索</a> | 
+            <a href="/contact">大綱記錄</a> |
+            <a href="/services">製作者名單</a> |
+            <a href="/products">參考資料</a>
+            <a href="/guestbook">留言板</a>
+        </nav>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 新增引言內容 -->
+    <div class="intro">
+        <strong>引言:</strong>
+        <p>人權是普世價值，但有些地區的人民其實沒有相關權益，比如說東南亞區域，這個區域曾經因為族群紛爭，產生嚴重的人權危機。如何為那些受害者發聲是我們的關懷。</p>
+        <p>在這次的展覽，我們會探討東南亞六個國家在人權相關的議題，這些國家分別是越南、緬甸、印尼、東帝汶、柬埔寨和馬來西亞。至於這些國家到底發生甚麼人權的危機，就請大家繼續往下走吧。</p>
+    </div>
+
+    <div class="circle-container">
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-image: url('{{ url_for('static', filename='4848.jpg') }}');/* 替换为你的背景图片路径 */
+            background-size: cover; /* 确保图片覆盖整个背景 */
+            background-position: center; /* 图片居中显示 */
+            background-repeat: no-repeat; /* 避免背景图片重复 */
+        }
+        h1 {
+            color: #333;
+            text-shadow: 1px 1px 2px #fff; /* 给标题添加阴影 */
+        }
+        form {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .message {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>留言板</h1>
+    
+    <!-- 留言表单 -->
+    <form method="POST">
+        <label for="name">名字:</label>
+        <input type="text" id="name" name="name" placeholder="輸入您的暱稱" required>
+        
+        <label for="message">留言:</label>
+        <textarea id="message" name="message" placeholder="輸入您對於這個策展有什麼樣的心得~" rows="4" required></textarea>
+        
+        <button type="submit">提交留言</button>
+    </form>
+    
+    <h2>所有留言:</h2>
+    <ul>
+        {% for msg in messages %}
+        <li>
+            <span class="name">{{ msg.name }}</span>
+            <div class="message">{{ msg.message }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

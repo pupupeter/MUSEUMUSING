@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Services</title>
+    <style>
+        /* 設置 body 居中對齊內容 */
+        body {
+            text-align: center;
+        }
+
+        /* 設定圖片大小 */
+        img {
+            width: 500px;  /* 可以根據需要調整大小 */
+            height: auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>製作者名單</h1>
+    <a href="/">Home</a>
+    <!-- 加入圖片並讓它居中顯示 -->
+    <img src="{{ url_for('static', filename='556.png') }}" alt="Image Description">
+    <img src="{{ url_for('static', filename='232.jpg') }}" alt="Image Description">
+</body>
+</html>
+
